@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.onboard.OnBoardViewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lifegate_blue">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/on_board_header_logo_img"
+            android:layout_width="250dp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/life_gate_header_logo" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/on_board_view_img"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@id/on_board_view_linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/on_board_header_logo_img"
+            tools:srcCompat="@drawable/ic_onboard_1" />
+
+        <!--<ImageView
+            android:id="@+id/on_board_view_img"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="32dp"
+            android:contentDescription="image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/ic_onboard_1" />-->
+
+        <LinearLayout
+            android:id="@+id/on_board_view_linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="48dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/on_board_view_img">
+
+            <TextView
+                android:id="@+id/on_board_view_title_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:padding="@dimen/dimen20dp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Find The Best Fitness Coaches To" />
+
+            <TextView
+                android:id="@+id/on_board_view_title_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:textStyle="bold"
+                tools:text="Help To Get In Shape In" />
+
+            <TextView
+                android:id="@+id/on_board_view_title_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:visibility="gone"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:text="Shape In Life Gate App" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

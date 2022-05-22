@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.coach.register.CoachRegisterFragment">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.lifegate.app.ui.fragments.coach.register.CoachRegisterViewModel" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:id="@+id/coach_register_content_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/coach_register_main_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="32dp"
+                    android:text="Coach Registration"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/et_name"
+                    android:padding="@dimen/dimen10dp"
+                    android:fontFamily="@font/iran_sans_light"
+                    android:text="@={viewmodel.coachName}"
+                    android:inputType="textCapWords"
+                    android:hint="Coach Name" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_country"
+                    android:clickable="false"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:focusableInTouchMode="false"
+                    android:editable="false"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:text="@={viewmodel.country}"
+                    android:hint="Country" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_email"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewmodel.email}"
+                    android:hint="Email" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:id="@+id/et_number"
+                    android:text="@={viewmodel.phone}"
+                    android:hint="Phone" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_passport"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:text="@={viewmodel.civilid}"
+                    android:hint="Civil-ID/ Passport Number" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/et_type"
+                    android:clickable="false"
+                    android:focusableInTouchMode="false"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:editable="false"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:text="@={viewmodel.type}"
+                    android:hint="Coach Type" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="20sp"
+                    android:id="@+id/ll_upload"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5sp"
+                        android:background="@drawable/upload" />
+                </LinearLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rv_images"
+                    android:layout_marginVertical="@dimen/dimen10dp"
+                    android:background="@drawable/curved_blue_border"
+                    android:scrollbars="none">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginTop="32dp"
+                    android:text="Register"
+                    android:background="@drawable/curvedbutton"
+                    android:onClick="@{() -> viewmodel.register()}"
+                    android:textAllCaps="true" />
+
+            </LinearLayout>
+
+        </ScrollView>
+        <RelativeLayout
+            android:id="@+id/rl_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7A000000"
+            android:clickable="true"
+            android:visibility="gone">
+
+        </RelativeLayout>
+        <include layout="@layout/bottom_choose_image"
+            android:id="@+id/bottomSheet">
+
+        </include>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    
+</layout>

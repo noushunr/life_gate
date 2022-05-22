@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.coach.detail.CoachDetailFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            layout="@layout/perform_workout_overlay_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:orientation="vertical"
+                    app:cardCornerRadius="0dp">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/coach_detail_sliderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:sliderAnimationDuration="600"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderAutoCycleDirection="right"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="@color/lifegate_blue"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="3" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/coach_detail_name_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            tools:text="Coach Mohsin Ali"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/coach_detail_place_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            tools:text="Kuwait City"
+                            android:textColor="#7A7A7A"
+                            android:textSize="12sp"
+                            app:drawableTint="#7A7A7A"
+                            app:drawableStartCompat="@drawable/location" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/coach_detail_type_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_weight="1"
+                            tools:text="Basketball Coache"
+                            android:textColor="#3D3C3C"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/coach_detail_club_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:drawablePadding="10dp"
+                            android:gravity="center"
+                            tools:text="Kuwait Club"
+                            android:textColor="#7A7A7A"
+                            android:textSize="12sp"
+                            app:drawableTint="#7A7A7A"
+                            app:drawableStartCompat="@drawable/fitness" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp"
+                    android:text="Services"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/coach_detail_service_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                    tools:listitem="@layout/list_coach_services"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="Certificate &amp; Awards"
+                        android:textColor="#000000"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:gravity="end"
+                        android:text="View All"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/coach_detail_certificate_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                    tools:listitem="@layout/list_coach_awards"
+                    android:orientation="horizontal"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#A8A7A7"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Years Of\nExperiance"
+                            android:textSize="14sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center"
+                            android:text=":"
+                            android:textSize="14sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/coach_detail_exp_yr_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_gravity="center"
+                            tools:text="3 Yrs"
+                            android:textSize="14sp"
+                            android:textColor="#35B7FC"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rating"
+                            android:textSize="12sp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/coach_detail_ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/ratingBarStyleSmall"
+                            tools:rating="3"
+                            android:progressTint="#F8D008"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:id="@+id/coach_detail_review_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/curvedblueborder"
+                            android:padding="5dp"
+                            android:text="Reviews (0)"
+                            android:textSize="13sp"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="#A8A7A7"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/coach_message_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginVertical="16dp"
+                    android:layout_marginHorizontal="16dp"
+                    android:drawableEnd="@drawable/ic_email_black"
+                    android:paddingEnd="24dp"
+                    android:paddingStart="24dp"
+                    android:text="@string/message_the_coach"
+                    android:background="@drawable/curved_blue_border"
+                    android:textAllCaps="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp"
+                    android:text="Plans"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/coach_detail_plan_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    tools:listitem="@layout/list_training_plan"
+                    tools:itemCount="2"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                <!--<include
+                    android:id="@+id/item"
+                    layout="@layout/list_training_plan" />
+
+                <include
+                    android:id="@+id/item2"
+                    layout="@layout/list_diet_plan" />-->
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <include
+            android:id="@+id/message"
+            tools:visibility="gone"
+            layout="@layout/coach_message_overlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

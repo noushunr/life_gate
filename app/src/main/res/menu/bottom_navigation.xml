@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_home"
+        android:title="HOME" />
+
+    <item
+        android:id="@+id/coachesFragment"
+        android:icon="@drawable/ic_coaches"
+        android:title="COACHES" />
+
+    <item
+        android:id="@+id/caloriesFragment"
+        android:icon="@drawable/ic_calories"
+        android:title="CALORIES" />
+
+    <item
+        android:id="@+id/myPlanFragment"
+        android:icon="@drawable/ic_my_plan"
+        android:title="MY PLAN" />
+
+    <!--<item
+        android:id="@+id/dietPlanFragment"
+        android:icon="@drawable/ic_diet_plan"
+        android:title="DIET PLAN" />-->
+
+    <item
+        android:id="@+id/dietListFragment"
+        android:icon="@drawable/ic_diet_plan"
+        android:title="DIET PLAN" />
+
+</menu>

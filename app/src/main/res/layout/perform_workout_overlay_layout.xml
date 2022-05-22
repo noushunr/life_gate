@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/perform_workout_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#33000000"
+        android:animateLayoutChanges="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            app:cardCornerRadius="24dp"
+            android:elevation="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:id="@+id/perform_workout_overlay_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_close"
+                        app:tint="#C5C5C5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="95dp"
+                        android:layout_height="95dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center"
+                        app:cardElevation="3dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:scaleType="fitXY"
+                                app:srcCompat="@drawable/total_time" />
+
+                            <TextView
+                                android:id="@+id/total_time_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                tools:text="Total Time\n6 min"
+                                android:textSize="12sp"
+                                android:textAlignment="center"/>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="8dp"
+                        android:orientation="horizontal"
+                        tools:visibility="visible"
+                        app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.75"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Set\nCounter"
+                                android:layout_gravity="center"
+                                android:textColor="#1C1A1A" />
+
+                            <RelativeLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="5dp">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/counter_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="0"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/lifegate_blue"
+                                    app:cpb_progressbar_width="5dp"
+                                    app:cpb_round_border="false" />
+
+                                <TextView
+                                    android:id="@+id/counter_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="12sp"
+                                    tools:text="10" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="#5B989898"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Timer"
+                                    android:layout_gravity="center"
+                                    android:textColor="#1C1A1A" />
+
+                                <androidx.appcompat.widget.AppCompatButton
+                                    android:id="@+id/start_btn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="25dp"
+                                    android:layout_margin="4dp"
+                                    android:background="@drawable/curvedbutton"
+                                    android:text="Start"
+                                    android:textColor="@color/white"
+                                    android:textSize="11sp"
+                                    android:textAllCaps="false" />
+
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:layout_width="55dp"
+                                android:layout_height="55dp"
+                                android:layout_marginStart="5dp">
+
+                                <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                    android:id="@+id/timer_progress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:cpb_background_progressbar_color="#b6bbd8"
+                                    app:cpb_background_progressbar_width="5dp"
+                                    app:cpb_progress="0"
+                                    app:cpb_progress_direction="to_right"
+                                    app:cpb_progressbar_color="@color/lifegate_blue"
+                                    app:cpb_progressbar_width="5dp"
+                                    app:cpb_round_border="false" />
+
+                                <TextView
+                                    android:id="@+id/timer_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:textSize="12sp"
+                                    tools:text="00:59" />
+
+                            </RelativeLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/perform_workout_submit_btn"
+                        android:layout_width="240dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/curvedbutton"
+                        android:text="@string/submit"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textAllCaps="false" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </FrameLayout>
+
+</layout>

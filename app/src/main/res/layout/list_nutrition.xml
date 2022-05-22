@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/status_check"
+                        android:layout_width="45dp"
+                        android:layout_height="50dp"
+                        android:background="@color/lifegate_blue"
+                        android:orientation="horizontal"
+                        tools:ignore="MissingConstraints">
+
+
+                        <TextView
+                            android:id="@+id/tick_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/ic_check"
+                            android:gravity="center" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/list_nutrition_header_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="15dp"
+                        tools:text="Breakfast at 09 am"
+                        android:textColor="#060606"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="2">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="4dp"
+                                android:layout_weight=".5"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="3dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Calories"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/list_nutrition_calories_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        tools:text="100 g"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+
+                                    <ImageButton
+                                        android:visibility="gone"
+                                        android:id="@+id/calories"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_button"
+                                        android:gravity="center"
+                                        android:src="@drawable/ic_add" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="4dp"
+                                android:layout_weight=".5"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="3dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Carbs"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/list_nutrition_carbs_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        tools:text="100 g"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+
+                                    <ImageButton
+                                        android:visibility="gone"
+                                        android:id="@+id/carbs"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_button"
+                                        android:gravity="center"
+                                        android:src="@drawable/ic_add" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="4dp"
+                                android:layout_weight=".5"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="3dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Proteins"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/list_nutrition_protein_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        tools:text="100 g"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+
+                                    <ImageButton
+                                        android:visibility="gone"
+                                        android:id="@+id/proteins"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_button"
+                                        android:gravity="center"
+                                        android:src="@drawable/ic_add" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="80dp"
+                                android:layout_margin="4dp"
+                                android:layout_weight=".5"
+                                app:cardCornerRadius="5dp"
+                                app:cardElevation="3dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:padding="5dp"
+                                        android:text="Fat"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+                                    <TextView
+                                        android:id="@+id/list_nutrition_fat_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        tools:text="100 g"
+                                        android:textColor="#060606"
+                                        android:textSize="10sp" />
+
+
+                                    <ImageButton
+                                        android:visibility="gone"
+                                        android:id="@+id/fat"
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/round_button"
+                                        android:gravity="center"
+                                        android:src="@drawable/ic_add" />
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:padding="8dp"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/squareblueborder"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:background="#35B7FC"
+                                    android:gravity="center"
+                                    android:text="Vitamins"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12dp" />
+
+                                <TextView
+                                    android:id="@+id/list_nutrition_vitamins_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    tools:text="Lorem ipsum dolor sit amet"
+                                    android:textColor="#8F8F8F"
+                                    android:textSize="10sp" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@drawable/squareblueborder"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="100dp"
+                                    android:layout_height="30dp"
+                                    android:background="#35B7FC"
+                                    android:gravity="center"
+                                    android:text="Minerals"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/list_nutrition_minerals_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:gravity="center"
+                                    tools:text="Lorem ipsum dolor sit amet"
+                                    android:textColor="#8F8F8F"
+                                    android:textSize="10sp" />
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="120dp"
+                        android:layout_height="125dp"
+                        app:cardCornerRadius="10dp"
+                        android:layout_marginEnd="8dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/list_nutrition_sub_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/basketball" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/list_nutrition_layout_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/lifegate_blue">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_arrow_down"
+                        app:tint="@color/white" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/list_nutrition_layout_hidden_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    tools:visibility="visible">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/list_nutrition_desc_txt"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:layout_weight="1"
+                            tools:text="@string/lorem_para"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="120dp"
+                            android:layout_height="125dp"
+                            app:cardCornerRadius="10dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/list_nutrition_main_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/basketball" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/list_nutrition_layout_up"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/lifegate_blue">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:tint="@color/white"
+                            app:srcCompat="@drawable/ic_arrow_up" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

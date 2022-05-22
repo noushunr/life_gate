@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.pricy_policy.PolicyFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dimen15dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            tools:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/tv_policy"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/dimen10dp"
+                android:padding="10dp"
+                android:textColor="@color/black" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>

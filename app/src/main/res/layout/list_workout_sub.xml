@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <LinearLayout
+                                android:id="@+id/linearLayout5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+
+                                <TextView
+                                    android:id="@+id/list_workout_sub_count_txt"
+                                    android:layout_width="45dp"
+                                    android:layout_height="50dp"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:background="@color/lifegate_blue"
+                                    android:textColor="@color/white"
+                                    android:textSize="14sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/list_workout_sub_title_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_gravity="center"
+                                    tools:text="Bench Press"
+                                    android:textColor="#060606" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp"
+                                android:layout_marginTop="4dp"
+                                android:orientation="horizontal">
+
+                                <RelativeLayout
+                                    android:id="@+id/list_workout_sub_status_update"
+                                    android:layout_width="30dp"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/curvedblueborder"
+                                    android:layout_margin="4dp">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:id="@+id/tick_img"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:visibility="gone"
+                                        tools:visibility="visible"
+                                        android:layout_centerInParent="true"
+                                        app:srcCompat="@drawable/ic_check_blue" />
+
+                                </RelativeLayout>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_margin="4dp"
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:paddingVertical="5dp"
+                                            android:text="REP"
+                                            android:textAllCaps="true"
+                                            android:textColor="#060606"
+                                            android:textSize="10sp"
+                                            android:autoSizeTextType="uniform"/>
+
+
+                                        <TextView
+                                            android:id="@+id/list_workout_sub_rep_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:background="@drawable/round_button"
+                                            android:minHeight="30dp"
+                                            android:minWidth="30dp"
+                                            android:gravity="center"
+                                            tools:text="15"
+                                            android:padding="5dp"
+                                            android:textColor="#ffffff"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_margin="4dp"
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:paddingVertical="5dp"
+                                            android:text="SETS"
+                                            android:textAllCaps="true"
+                                            android:textColor="#060606"
+                                            android:textSize="10sp"
+                                            android:autoSizeTextType="uniform"/>
+
+
+                                        <TextView
+                                            android:id="@+id/list_workout_sub_sets_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:padding="5dp"
+                                            android:minHeight="30dp"
+                                            android:minWidth="30dp"
+                                            android:background="@drawable/round_button"
+                                            android:gravity="center"
+                                            tools:text="3"
+                                            android:textColor="#ffffff"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="80dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="4dp"
+
+                                    app:cardCornerRadius="10dp">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="CALORIES"
+                                            android:textAllCaps="true"
+                                            android:paddingVertical="5dp"
+                                            android:singleLine="true"
+                                            android:textColor="#060606"
+                                            android:textSize="10sp"
+                                            android:autoSizeTextType="uniform"/>
+
+
+                                        <TextView
+                                            android:id="@+id/list_workout_sub_calories_txt"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="4dp"
+                                            android:layout_marginBottom="4dp"
+                                            android:background="@drawable/round_button"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:minHeight="30dp"
+                                            android:minWidth="30dp"
+                                            tools:text="50"
+                                            android:textColor="#ffffff"
+                                            android:textSize="13sp" />
+
+                                    </LinearLayout>
+
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_margin="4dp"
+                            app:cardElevation="1dp"
+                            android:layout_gravity="center">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/list_workout_sub_img"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/basketball" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/list_workout_sub_layout_down"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/lifegate_blue">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_arrow_down"
+                            app:tint="@color/white" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/list_workout_sub_layout_hidden_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#5B989898"/>
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="24dp"
+                                android:layout_marginEnd="24dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rest Time"
+                                    android:textColor="#1C1A1A" />
+
+                                <TextView
+                                    android:id="@+id/list_workout_sub_rest_time_min_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    tools:text="1 min" />
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="#5B989898"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Weight Recomended"
+                                    android:textColor="#1C1A1A" />
+
+                                <TextView
+                                    android:id="@+id/list_workout_sub_weight_recommended_txt"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:gravity="center"
+                                    tools:text="10 kg, 15 kg, 20 kg" />
+
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="#5B989898"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="95dp"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                app:cardElevation="3dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="36dp"
+                                        android:layout_height="36dp"
+                                        android:scaleType="fitXY"
+                                        app:srcCompat="@drawable/total_time" />
+
+                                    <TextView
+                                        android:id="@+id/list_workout_sub_total_time_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="4dp"
+                                        tools:text="Total Time\n6 min"
+                                        android:textSize="12sp"
+                                        android:textAlignment="center"/>
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="0dp"
+                                android:layout_height="95dp"
+                                android:layout_margin="8dp"
+                                android:layout_weight="2"
+                                app:cardElevation="3dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical"
+                                    android:gravity="center">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Add My Weight"
+                                        android:textSize="13sp"
+                                        android:textColor="#1C1A1A"
+                                        android:textAlignment="center"/>
+
+                                    <LinearLayout
+                                        android:id="@+id/list_workout_sub_add_weight_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="8dp"
+                                        android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:scaleType="fitXY"
+                                            android:padding="4dp"
+                                            android:background="@drawable/round_button"
+                                            app:srcCompat="@drawable/ic_plus" />
+
+                                        <!--<androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:scaleType="fitXY"
+                                            android:layout_marginStart="8dp"
+                                            android:padding="4dp"
+                                            android:background="@drawable/round_button"
+                                            app:srcCompat="@drawable/ic_plus" />
+
+                                        <androidx.appcompat.widget.AppCompatImageView
+                                            android:layout_width="36dp"
+                                            android:layout_height="36dp"
+                                            android:scaleType="fitXY"
+                                            android:layout_marginStart="8dp"
+                                            android:padding="4dp"
+                                            android:background="@drawable/round_button"
+                                            app:srcCompat="@drawable/ic_plus" />-->
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:visibility="gone"
+                                android:layout_width="0dp"
+                                android:layout_height="95dp"
+                                android:layout_margin="8dp"
+                                android:layout_weight="1"
+                                app:cardElevation="3dp"
+                                app:cardCornerRadius="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="8dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Actual Weight"
+                                        android:gravity="center"
+                                        android:textAlignment="inherit"
+                                        android:textColor="#1C1A1A" />
+
+                                    <TextView
+                                        android:id="@+id/list_workout_sub_weight_actual_txt"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="10dp"
+                                        android:gravity="center"
+                                        tools:text="10 kg, 15 kg, 20 kg" />
+
+
+                                </LinearLayout>
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/list_workout_sub_upload_btn"
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/curvedbutton"
+                            android:drawableEnd="@drawable/ic_add"
+                            android:drawableTint="@color/white"
+                            android:text="Upload Video"
+                            android:layout_gravity="end"
+                            android:textAllCaps="false" />
+
+                        <LinearLayout
+                            android:id="@+id/linearLayout9"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="4dp"
+                            android:orientation="vertical"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout8">
+
+
+                            <TextView
+                                android:id="@+id/add_notes_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Notes:   +"
+                                android:layout_marginStart="4dp"
+                                android:textColor="#1C1A1A" />
+
+                            <TextView
+                                android:id="@+id/list_workout_sub_notes_txt"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:padding="4dp"
+                                tools:text="@string/lorem_para" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="16dp"
+                            android:background="#5B989898"/>
+
+                        <LinearLayout
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginStart="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="horizontal"
+                            tools:visibility="visible"
+                            app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout7">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Set\nCounter"
+                                    android:layout_gravity="center"
+                                    android:textColor="#1C1A1A" />
+
+                                <RelativeLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="16dp">
+
+                                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:cpb_background_progressbar_color="#b6bbd8"
+                                        app:cpb_background_progressbar_width="5dp"
+                                        app:cpb_progress="60"
+                                        app:cpb_progress_direction="to_right"
+                                        app:cpb_progressbar_color="@color/lifegate_blue"
+                                        app:cpb_progressbar_width="5dp"
+                                        app:cpb_round_border="false" />
+
+                                    <TextView
+                                        android:id="@+id/list_workout_sub_counter_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="22sp"
+                                        tools:text="10" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="8dp"
+                                android:background="#5B989898"/>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Timer"
+                                        android:layout_gravity="center"
+                                        android:textColor="#1C1A1A" />
+
+                                    <androidx.appcompat.widget.AppCompatButton
+                                        android:id="@+id/list_workout_sub_start_btn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="25dp"
+                                        android:layout_margin="4dp"
+                                        android:background="@drawable/curvedbutton"
+                                        android:text="Start"
+                                        android:textColor="@color/white"
+                                        android:textSize="11sp"
+                                        android:textAllCaps="false" />
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="70dp"
+                                    android:layout_height="70dp"
+                                    android:layout_marginStart="16dp">
+
+                                    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        app:cpb_background_progressbar_color="#b6bbd8"
+                                        app:cpb_background_progressbar_width="5dp"
+                                        app:cpb_progress_direction="to_right"
+                                        app:cpb_progressbar_color="@color/lifegate_blue"
+                                        app:cpb_progressbar_width="5dp"
+                                        app:cpb_round_border="false"
+                                        app:cpb_progress="80"/>
+
+                                    <TextView
+                                        android:id="@+id/list_workout_sub_timer_txt"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true"
+                                        android:textSize="12sp"
+                                        tools:text="00:59" />
+
+                                </RelativeLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/list_workout_sub_perform_workout_btn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="8dp"
+                            android:text="@string/perform_workout"/>
+
+                        <RelativeLayout
+                            android:id="@+id/list_workout_sub_layout_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="16dp"
+                            android:background="@color/lifegate_blue">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                app:tint="@color/white"
+                                app:srcCompat="@drawable/ic_arrow_up" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/curvedblueborder"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="45dp"
+                android:layout_height="50dp"
+                android:background="@drawable/curved_left"
+                android:orientation="horizontal"
+                tools:ignore="MissingConstraints">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_check"
+                    android:gravity="center"
+                    app:drawableLeftCompat="@drawable/curved_left" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/list_workout_sub_rest_time_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="10dp"
+                tools:text="REST FOR 1 MINS" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

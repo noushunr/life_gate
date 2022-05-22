@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.myplan.detail.PlanDetailFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp">
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/plan_detail_sliderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:sliderAnimationDuration="600"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderAutoCycleDirection="right"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="@color/lifegate_blue"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="3" />
+
+                    <TextView
+                        android:id="@+id/plan_detail_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        tools:text="Basketball For 30 Days"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Description"
+                        android:textColor="#000000"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/plan_detail_desc_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:padding="4dp"
+                        tools:text="@string/lorem_para"
+                        android:textColor="#000000"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Service"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:text=":"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/plan_detail_plan_type_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                tools:text="Training Plan"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Duration"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:text=":"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/plan_detail_duration_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                tools:text="30 Days"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Price"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:text=":"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/plan_detail_price_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                tools:text="KD 30.000"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Other Fees"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                android:text=":"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                            <TextView
+                                android:id="@+id/plan_detail_extra_cost_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_gravity="center"
+                                tools:text="KD 4.500"
+                                android:textSize="14sp"
+                                android:textColor="#000000"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rating"
+                            android:textSize="12sp"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:id="@+id/plan_detail_ratingBar"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            style="?android:attr/ratingBarStyleSmall"
+                            tools:rating="3"
+                            android:progressTint="#F8D008"
+                            android:layout_marginTop="4dp"/>
+
+                        <TextView
+                            android:id="@+id/plan_detail_review_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/curvedblueborder"
+                            android:padding="5dp"
+                            android:text="Reviews (0)"
+                            android:textSize="13sp"
+                            android:textColor="#000000"/>
+
+                        <TextView
+                            android:id="@+id/plan_detail_msg_coach_txt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:background="@drawable/curvedblueborder"
+                            android:padding="5dp"
+                            android:text="Message the Coach"
+                            android:textSize="13sp"
+                            android:textColor="#000000"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/plan_detail_purchase_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/curvedbutton"
+                    android:text="PURCHASE THIS PLAN" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rules &amp; Regulations"
+                    android:layout_margin="8dp"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/plan_detail_rules_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt \nut labore"
+                        android:textSize="12sp"
+                        android:textColor="#7D7C7C" />
+
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/lorem_small_para"
+                        android:textSize="12sp"
+                        android:drawablePadding="4dp"
+                        android:textColor="#7D7C7C"
+                        app:drawableStartCompat="@drawable/bullet_point" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/lorem_small_para"
+                        android:textSize="12sp"
+                        android:drawablePadding="4dp"
+                        android:textColor="#7D7C7C"
+                        app:drawableStartCompat="@drawable/bullet_point" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="@string/lorem_small_para"
+                        android:textSize="12sp"
+                        android:drawablePadding="4dp"
+                        android:textColor="#7D7C7C"
+                        app:drawableStartCompat="@drawable/bullet_point" />-->
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+        <include
+            android:id="@+id/message"
+            tools:visibility="gone"
+            layout="@layout/coach_message_overlay"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+</layout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_auto_image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/life_gate_logo"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+             />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/ll_preview"
+            android:gravity="center"
+            android:background="@drawable/circle_shape">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/play"
+                android:id="@+id/iv_play"
+                app:tint="@color/white">
+
+            </ImageView>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+    <ImageView
+        android:id="@+id/iv_gif_container"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:visibility="gone"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="50dp" />
+
+
+    <FrameLayout
+        android:id="@+id/fl_shadow_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:id="@+id/tv_auto_image_slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragments.workout.plan.WorkoutPlanFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/my_plan_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout10"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginEnd="10dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/go_to_plan"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lifegate_grey"
+                            android:drawableTop="@drawable/ic_date"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="PLAN"
+                            android:textColor="#16191A"
+                            android:textSize="10dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="MY WORKOUT PLAN"
+                                android:textColor="@color/black"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="For Today"
+                                android:textColor="#35B7FC"
+                                android:textSize="14sp" />
+
+
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:id="@+id/go_to_history"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:background="@color/lifegate_grey"
+                            android:drawableTop="@drawable/ic_time"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="HISTORY"
+                            android:textColor="#16191A"
+                            android:textSize="10dp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/plan_gym"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight=".5"
+                            app:cardElevation="3dp"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/gym" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Gym\n"
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/plan_equipment"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight=".5"
+                            app:cardCornerRadius="5dp"
+                            app:cardElevation="3dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/equipment" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Equipment\n"
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/plan_time"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight=".5"
+                            app:cardElevation="3dp"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/total_time" />
+
+                                <TextView
+                                    android:id="@+id/total_time_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Total Time\n "
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/plan_calories"
+                            android:layout_width="0dp"
+                            android:layout_height="95dp"
+                            android:layout_margin="4dp"
+                            android:layout_weight=".5"
+                            app:cardElevation="3dp"
+                            app:cardCornerRadius="5dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:gravity="center">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="36dp"
+                                    android:layout_height="36dp"
+                                    android:scaleType="fitXY"
+                                    app:srcCompat="@drawable/dietition_coach_icon" />
+
+                                <TextView
+                                    android:id="@+id/cal_burned_txt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Calories \nBurned "
+                                    android:textSize="12sp"
+                                    android:textAlignment="center"/>
+
+                            </LinearLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <!--<com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".5"
+
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginRight="10dp"
+                                android:drawableTop="@drawable/fitness"
+                                android:drawablePadding="10dp"
+                                android:gravity="center"
+                                android:text="Fitness\nCoaches"
+                                android:textColor="#7A7A7A"
+                                android:textSize="12sp"
+                                app:drawableTint="#7A7A7A" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".5"
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:drawableTop="@drawable/fitness"
+                                android:gravity="center"
+                                android:text="Sports\nCoaches"
+                                android:textColor="#7A7A7A"
+                                android:textSize="12sp"
+                                app:drawableTint="#7A7A7A" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".5"
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:drawableTop="@drawable/clock"
+                                android:gravity="center"
+                                android:text="Nutrition\nCoaches"
+                                android:textColor="#7A7A7A"
+                                android:textSize="12sp"
+                                app:drawableTint="#7A7A7A" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight=".5"
+                            app:cardCornerRadius="10dp">
+
+                            <TextView
+                                android:layout_width="80dp"
+                                android:layout_height="70dp"
+                                android:drawableTop="@drawable/fitness"
+                                android:gravity="center"
+                                android:text="Dietitian\nCoaches"
+                                android:textColor="#7A7A7A"
+                                android:textSize="12sp"
+                                app:drawableTint="#7A7A7A" />
+
+                        </com.google.android.material.card.MaterialCardView>-->
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/workout_main_recyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/list_workout"
+                        tools:itemCount="2"
+                        android:nestedScrollingEnabled="false"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+                    <!--<Button
+                        android:layout_width="200dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/curvedbutton"
+                        android:drawableEnd="@drawable/ic_arrow_down"
+                        android:drawableTint="@color/white"
+                        android:text="Chest"
+                        android:textAllCaps="false" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <include
+                            android:id="@+id/item"
+                            layout="@layout/list_workout" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/curvedblueborder"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="45dp"
+                            android:layout_height="50dp"
+                            android:background="@drawable/curved_left"
+                            android:orientation="horizontal"
+                            tools:ignore="MissingConstraints">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/ic_check"
+                                android:drawableLeft="@drawable/curved_left"
+                                android:gravity="center" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="REST FOR 1 MINS" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical">
+
+                        <include layout="@layout/list_workout" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp">
+
+                        <Button
+                            android:layout_width="200dp"
+                            android:layout_height="40dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/curvedbutton"
+                            android:drawableEnd="@drawable/ic_arrow_right"
+                            android:text="Legs"
+                            android:textAllCaps="false" />
+
+                    </LinearLayout>-->
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/linearLayout5"
+                        app:srcCompat="@drawable/home_ads" />
+
+                    <com.smarteist.autoimageslider.SliderView
+                        android:id="@+id/banner_sliderView"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        app:sliderAnimationDuration="600"
+                        app:sliderIndicatorAnimationDuration="600"
+                        app:sliderIndicatorEnabled="true"
+                        app:sliderAutoCycleDirection="right"
+                        app:sliderIndicatorGravity="center_horizontal|bottom"
+                        app:sliderIndicatorMargin="15dp"
+                        app:sliderIndicatorOrientation="horizontal"
+                        app:sliderIndicatorPadding="3dp"
+                        app:sliderIndicatorRadius="2dp"
+                        app:sliderIndicatorSelectedColor="@color/lifegate_blue"
+                        app:sliderIndicatorUnselectedColor="#FFF"
+                        app:sliderScrollTimeInSec="3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/home_featured_plan_recyclerview" />
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+            <include
+                android:id="@+id/perform_workout"
+                layout="@layout/perform_workout_overlay_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/notes"
+                layout="@layout/add_notes_overlay"
+                tools:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <include
+                android:id="@+id/weight"
+                layout="@layout/add_weight_overlay"
+                tools:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#7A000000"
+            android:clickable="true"
+            android:visibility="gone">
+        </RelativeLayout>
+        <include
+            android:id="@+id/bottomSheet"
+            layout="@layout/equipment_bottomsheet" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

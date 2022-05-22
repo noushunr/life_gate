@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/circle_shape.xml" value="0.1125" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/curvedbutton.xml" value="0.1125" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/ic_coaches.xml" value="0.1125" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/ic_my_plan.xml" value="0.1125" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/activity_slider.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/calories_fragment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/choose_location_fragment.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/consumed_calorie_overlay.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/food_menu_bottomsheet.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/fragment_on_board_view.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/goals_overlay_layout.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/home_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/image_slider_layout_item.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_coaches.xml" value="0.14479166666666668" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_featured_coaches.xml" value="0.264" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_featured_plan.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_food_menu.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_grocery.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_home_featured_coaches.xml" value="0.4" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/list_home_featured_plan.xml" value="0.2" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/login_fragment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/nutrition_grocery_fragment.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/on_board_fragment.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/plan_detail_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/profile_fragment.xml" value="0.176" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/progress_overlay_layout.xml" value="0.23233695652173914" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/layout/settings_fragment.xml" value="0.136" />
+        <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/menu/bottom_navigation.xml" value="0.25416666666666665" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>

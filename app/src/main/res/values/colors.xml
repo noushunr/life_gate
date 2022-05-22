@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="lifegate_blue">#37B7FE</color>
+    <color name="lifegate_yellow">#F8D008</color>
+    <color name="lifegate_grey">#D9F2FF</color>
+    <color name="lifegate_blue_txt">#35B7FC</color>
+    <color name="lifegate_black_txt">#4E4E4E</color>
+    <color name="lifegate_red_txt">#FF0000</color>
+    <color name="lifegate_orange_txt">#FC6011</color>
+    <color name="lifegate_green_txt">#3FB914</color>
+
+    <color name="cardview_default_background">#FF424242</color>
+    <color name="cardview_selected_background">#ECF1F7</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="button_transparent">#4D000000</color>
+</resources>
