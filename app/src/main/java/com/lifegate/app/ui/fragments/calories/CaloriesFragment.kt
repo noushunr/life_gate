@@ -101,6 +101,9 @@ class CaloriesFragment : Fragment(), KodeinAware, NetworkListener,
             viewModel.isFirst = false
             viewModel.fetchConsumed()
         }
+        if (!viewModel.getLoginStatus()){
+            viewModel.fetchFoodList()
+        }
 
         initView()
     }

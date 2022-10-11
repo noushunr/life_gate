@@ -54,6 +54,9 @@ class CoachesListApi {
         @SerializedName("city_name")
         var city_name: String? = null,
 
+        @SerializedName("country_name")
+        var country_name: String? = null,
+
         @SerializedName("coach_club_name")
         var coach_club_name: String? = null,
 

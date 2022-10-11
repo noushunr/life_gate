@@ -223,7 +223,20 @@
                                         android:text="Country"
                                         android:textColor="@color/black"
                                         android:textSize="14sp" />
+                                    <AutoCompleteTextView
+                                        android:id="@+id/country_spinner"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:completionThreshold="1"
+                                        android:background="@null"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginBottom="4dp"
+                                        android:maxLines="1"
 
+                                        android:textSize="16sp"
+                                        android:drawablePadding="8dp"
+                                        android:drawableStart="@drawable/map"
+                                        app:autoSizeTextType="uniform" />
                                     <EditText
                                         android:id="@+id/profile_country_txt"
                                         android:layout_width="match_parent"
@@ -231,6 +244,7 @@
                                         android:layout_marginTop="10dp"
                                         android:layout_marginBottom="4dp"
                                         android:inputType="text"
+                                        android:visibility="gone"
                                         android:background="@null"
                                         android:textSize="16sp"
                                         android:drawablePadding="8dp"

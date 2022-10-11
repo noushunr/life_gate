@@ -59,6 +59,7 @@ class SignUpViewModel(
         val mPassword = password
         val mConfirmPass = confirmPass
         val city = cityId
+        val country = countryId
 
         if (mEmail.isNullOrEmpty() || mName.isNullOrEmpty() ||
             mPhone.isNullOrEmpty() || mPassword.isNullOrEmpty() ||
@@ -111,7 +112,7 @@ class SignUpViewModel(
         CoRoutines.main {
             try {
                 val response = repository.userSignUp(
-                    mName, mEmail, mPhone, mPassword, mConfirmPass, city
+                    mName, mEmail, mPhone, mPassword, mConfirmPass,country!!, city
                 )
 
                 checkSignUpResponse(response)

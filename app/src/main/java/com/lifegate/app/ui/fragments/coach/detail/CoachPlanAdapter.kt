@@ -65,9 +65,9 @@ class CoachPlanAdapter(
         holder.binding.listCoachPlanDescTxt.text = item.plan_desc?.clearHtmlTag()
         val planStart = StringBuilder()
         if (item.plan_cost != null) {
-            planStart.append("Plans start from: $ ").append(item.plan_cost)
+            planStart.append("The price is: $ ").append(item.plan_cost)
         } else {
-            planStart.append("Plans start from: $ ").append("0.00")
+            planStart.append("The price is: $ ").append("0.00")
         }
         holder.binding.listCoachPlanPriceTxt.text = planStart
         val slider = setSliders(item.plan_pics)

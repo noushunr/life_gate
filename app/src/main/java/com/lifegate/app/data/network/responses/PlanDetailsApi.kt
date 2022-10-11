@@ -44,6 +44,9 @@ class PlanDetailsApi {
         @SerializedName("plan_cost")
         var plan_cost: String? = null,
 
+        @SerializedName("plan_total")
+        var plan_total: String? = null,
+
         @SerializedName("plan_extracost")
         var plan_extracost: String? = null,
 

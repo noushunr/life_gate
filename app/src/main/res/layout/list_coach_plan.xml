@@ -19,16 +19,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
+
                 android:padding="8dp">
 
                 <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/cv_image"
                     android:orientation="vertical"
                     android:padding="4dp">
 
@@ -48,7 +49,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
                         android:layout_marginTop="4dp"
-                        tools:text="Online plans for 30 days\n For learning The Basic Of Basketball Techniques"
+                        android:maxLines="6"
+                        tools:text="Online plans for 30 day\n For learning The Basic Of Basketball Techniques"
                         android:textColor="#ffffff"
                         android:textSize="13sp" />
 
@@ -57,7 +59,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="4dp"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="10dp"
                         android:text="@string/plan_start_at"
                         android:textColor="#ffffff"
                         android:textSize="15sp" />
@@ -67,6 +69,9 @@
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="140dp"
                     android:layout_height="150dp"
+                    android:id="@+id/cv_image"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
                     android:orientation="vertical"
                     app:cardCornerRadius="10dp">
 
@@ -90,7 +95,7 @@
 
                 </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
+            </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
 

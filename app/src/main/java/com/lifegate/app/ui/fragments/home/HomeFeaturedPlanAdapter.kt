@@ -12,6 +12,7 @@ import androidx.core.view.updateLayoutParams
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.lifegate.app.R
 import com.lifegate.app.data.model.SlideModel
 import com.lifegate.app.data.network.responses.HomeFeaturedPlansApi.HomeFeaturedPlans
 import com.lifegate.app.databinding.ListHomeFeaturedPlanBinding
@@ -80,9 +81,16 @@ class HomeFeaturedPlanAdapter(
         holder.binding.listFeaturesPlanCoachName.text = "Coach: $coachName"
         val planStart = StringBuilder()
         if (item.plan_cost != null) {
-            planStart.append("Plans start from: $").append(item.plan_cost)
+            planStart.append("The price is: $").append(item.plan_cost)
         } else {
-            planStart.append("Plans start from: $").append("0.00")
+            planStart.append("The price is: $").append("0.00")
+        }
+        if (item.plan_basic_type?.equals("N")!!){
+            holder.binding.cvMain.setBackgroundColor(holder.binding.cvMain.context.getColor(
+                R.color.lifegate_yellow))
+        }else{
+            holder.binding.cvMain.setBackgroundColor(holder.binding.cvMain.context.getColor(
+                R.color.lifegate_blue))
         }
         holder.binding.listHomeFeaturesPlanPriceTxt.text = planStart
         val slider = setSliders(item.plan_pics)

@@ -3,6 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/drawable-xxhdpi/circle_shape_blue.xml" value="0.124" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/drawable/circle_shape.xml" value="0.1375" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/drawable/location.xml" value="0.124" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/calories_fragment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/checkout_fragment.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/coach_detail_fragment.xml" value="0.176" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/home_fragment.xml" value="0.10371376811594203" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_calories.xml" value="0.12360688956433637" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_coach_plan.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_coaches.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_country_popup.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_featured_coaches.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_food_menu.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_home_featured_plan.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_notification.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_restaurant.xml" value="0.11302083333333333" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/list_rules.xml" value="0.2" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/plan_detail_fragment.xml" value="0.10371376811594203" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/profile_fragment.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/restaurant_fragment.xml" value="0.264" />
+        <entry key="..\:/Users/DELL/StudioProjects/life_gate/app/src/main/res/layout/sign_up_fragment.xml" value="0.12360688956433637" />
         <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/circle_shape.xml" value="0.1125" />
         <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/curvedbutton.xml" value="0.1125" />
         <entry key="..\:/Users/TILTLABS/Downloads/5_6176741185915192660/LifeGate/app/src/main/res/drawable/ic_coaches.xml" value="0.1125" />

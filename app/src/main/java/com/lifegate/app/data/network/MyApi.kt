@@ -43,6 +43,7 @@ interface MyApi {
         @Field("mobile") mobile: String,
         @Field("password") password: String,
         @Field("confirm_password") confirm: String,
+        @Field("country")country: String,
         @Field("city_id") city: String
     ) : Response<SignUpApi.SignUpResponse>
 

@@ -339,6 +339,11 @@
             app:nullable="true"
             android:defaultValue="@null"/>
         <argument
+            android:name="total_price"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="@null"/>
+        <argument
             android:name="duration"
             app:argType="string"
             app:nullable="true"

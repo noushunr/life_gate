@@ -249,18 +249,19 @@
                         android:background="@drawable/curvedbutton"
 
                        >
+
                         <TextView
+                            android:id="@+id/tv_add_cal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/intake_calories"
-                            android:id="@+id/tv_add_cal"
-                            android:textAllCaps="false"
-                            android:gravity="center"
-                            android:singleLine="true"
                             android:layout_centerInParent="true"
+                            android:gravity="center"
                             android:padding="@dimen/dimen10dp"
-                            android:textSize="12sp"
-                            android:textColor="@color/white">
+                            android:singleLine="true"
+                            android:text="@string/intake_calories"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="12sp">
 
                         </TextView>
                         <ImageView

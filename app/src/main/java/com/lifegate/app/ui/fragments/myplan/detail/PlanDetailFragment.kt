@@ -3,10 +3,12 @@ package com.lifegate.app.ui.fragments.myplan.detail
 import android.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
+import android.text.Html
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.text.HtmlCompat
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
@@ -16,6 +18,7 @@ import com.lifegate.app.data.model.SlideModel
 import com.lifegate.app.databinding.PlanDetailFragmentBinding
 import com.lifegate.app.ui.activity.MainActivity
 import com.lifegate.app.ui.fragments.coach.detail.CoachDetailFragmentDirections
+import com.lifegate.app.ui.fragments.notification.NotificationAdapter
 import com.lifegate.app.utils.*
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType
 import com.smarteist.autoimageslider.SliderAnimations
@@ -36,6 +39,8 @@ class PlanDetailFragment : Fragment(), KodeinAware, NetworkListener, PlanDetailL
     private lateinit var navController: NavController
     private lateinit var binding: PlanDetailFragmentBinding
     private val factory: PlanDetailViewModelFactory by instance()
+
+    private lateinit var planAdapter: PlanRulesAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -64,6 +69,10 @@ class PlanDetailFragment : Fragment(), KodeinAware, NetworkListener, PlanDetailL
             checkLoginStatus()
         }
 
+        planAdapter = PlanRulesAdapter {
+
+        }
+        binding.planRules.adapter = planAdapter
         binding.planDetailMsgCoachTxt.setOnClickListener {
             binding.message.overlay.visibility = View.VISIBLE
         }
@@ -110,13 +119,14 @@ class PlanDetailFragment : Fragment(), KodeinAware, NetworkListener, PlanDetailL
 
             binding.planDetailNameTxt.text = viewModel.planName
             binding.planDetailPlanTypeTxt.text = viewModel.planType
-            binding.planDetailDescTxt.text = viewModel.planDesc
-            binding.planDetailRulesTxt.text = viewModel.planRule
+            binding.planDetailDescTxt.text = Html.fromHtml(viewModel.planDesc!!, Html.FROM_HTML_MODE_LEGACY)
+            binding.planDetailRulesTxt.text = Html.fromHtml(viewModel.planRule!!, Html.FROM_HTML_MODE_LEGACY)
             binding.planDetailDurationTxt.text = "${viewModel.planDuration} Days"
 
             binding.planDetailPriceTxt.text = viewModel.planPrice
             binding.planDetailExtraCostTxt.text = viewModel.planExtraCost
             binding.planDetailRatingBar.rating = viewModel.planRating
+            planAdapter.submitList(viewModel.planRules.toList())
 
         })
     }
@@ -133,7 +143,7 @@ class PlanDetailFragment : Fragment(), KodeinAware, NetworkListener, PlanDetailL
 
     private fun goToNextFrag() {
         val action = PlanDetailFragmentDirections.actionPlanDetailFragmentToCheckoutFragment(
-            viewModel.planId, viewModel.planName, viewModel.planPic, viewModel.planPrice, viewModel.planExtraCost, viewModel.planDuration
+            viewModel.planId, viewModel.planName, viewModel.planPic, viewModel.planPrice, viewModel.planExtraCost,viewModel.planTotalPrice, viewModel.planDuration
         )
         navController.safeNavigate(action)
     }

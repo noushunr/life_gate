@@ -99,11 +99,11 @@ class CoachDetailFragment : Fragment(), KodeinAware, NetworkListener, CoachDetai
 
             binding.coachDetailNameTxt.text = viewModel.coachName
             binding.coachDetailTypeTxt.text = viewModel.coachType
-            binding.coachDetailPlaceTxt.text = viewModel.coachCity
+            binding.coachDetailPlaceTxt.text =  "${item.country_name},\n${item.city_name}"
             binding.coachDetailClubTxt.text = viewModel.coachClub
             binding.coachDetailExpYrTxt.text = viewModel.coachExp
             binding.coachDetailRatingBar.rating = viewModel.coachRating
-
+            binding.tvDescription.text = item.coach_about
             serviceAdapter.submitList(viewModel.coachServiceList)
             awardsAdapter.submitList(viewModel.coachAwardList)
             planAdapter.submitList(viewModel.coachPlanList)

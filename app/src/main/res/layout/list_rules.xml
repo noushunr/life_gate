@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dimen10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:background="@drawable/circle_shape_blue">
+
+                </ImageView>
+                <TextView
+                    android:id="@+id/list_rules"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Mais Alghanim Resturant"
+                    android:textColor="#7D7C7C"
+                    android:layout_marginStart="5dp"
+                    android:textSize="12sp"
+                     />
+            </LinearLayout>
+
+
+    </FrameLayout>
+
+</layout>

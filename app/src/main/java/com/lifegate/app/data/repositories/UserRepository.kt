@@ -77,11 +77,12 @@ class UserRepository(
         mobile: String,
         password: String,
         confirm: String,
+        country: String,
         city: String
     ) : SignUpApi.SignUpResponse {
 
         return apiRequest {
-            api.userSignUp(APP_HEADER_KEY, name, email, mobile, password, confirm, city)
+            api.userSignUp(APP_HEADER_KEY, name, email, mobile, password, confirm,country, city)
         }
     }
 

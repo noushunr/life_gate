@@ -68,16 +68,16 @@ class CheckoutFragment : Fragment(), KodeinAware, NetworkListener {
         binding.checkoutPlanDurationTxt.text = safeArgs.duration
         binding.checkoutPlanPriceTxt.text = safeArgs.price
         binding.checkoutServicePriceTxt.text = safeArgs.extra
-        binding.checkoutTotalPriceTxt.text = safeArgs.price
+        binding.checkoutTotalPriceTxt.text = safeArgs.totalPrice
 
-        try {
-            val price = safeArgs.price.toString().toFloat()
-            val extra = safeArgs.extra.toString().toFloat()
-            val total = price + extra
-            binding.checkoutTotalPriceTxt.text = "$ $total"
-        } catch (e: Exception) {
-
-        }
+//        try {
+//            val price = safeArgs.price.toString().toFloat()
+//            val extra = safeArgs.extra.toString().toFloat()
+//            val total = price + extra
+//            binding.checkoutTotalPriceTxt.text = "$ $total"
+//        } catch (e: Exception) {
+//
+//        }
 
         initView()
     }
@@ -89,6 +89,7 @@ class CheckoutFragment : Fragment(), KodeinAware, NetworkListener {
             binding.checkoutPlanNameTxt.text = viewModel.planName
             binding.checkoutPlanStartDateTxt.text = viewModel.planStartDate
             binding.checkoutPlanEndDateTxt.text = viewModel.planEndDate
+
             binding.checkoutPlanPriceTxt.text = viewModel.planPrice
             binding.checkoutServicePriceTxt.text = viewModel.planServicePrice
             //binding.checkoutCouponCodeTxt.setText(viewModel.planDiscount)

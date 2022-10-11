@@ -73,7 +73,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawablePadding="10dp"
-                            android:gravity="center"
+                            android:gravity="center_vertical"
                             tools:text="Kuwait City"
                             android:textColor="#7A7A7A"
                             android:textSize="12sp"
@@ -103,7 +103,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
                             android:drawablePadding="10dp"
-                            android:gravity="center"
+                            android:gravity="center_vertical"
                             tools:text="Kuwait Club"
                             android:textColor="#7A7A7A"
                             android:textSize="12sp"
@@ -114,6 +114,15 @@
 
                 </LinearLayout>
 
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:padding="8dp"
+                    android:id="@+id/tv_description"
+                    tools:text="Services"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

@@ -25,6 +25,7 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
                     android:orientation="vertical">
 
                     <de.hdodenhof.circleimageview.CircleImageView
@@ -46,6 +47,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="KD 20"
+                        android:gravity="center"
                         android:layout_gravity="center"
                         android:textColor="#3D3C3C"
                         android:textSize="14sp"
@@ -80,15 +82,17 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:weightSum="2"
                         android:layout_marginTop="4dp"
                         android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/list_coaches_city_txt"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
-                            android:drawablePadding="10dp"
-                            android:gravity="center"
+                            android:layout_weight="1"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
                             tools:text="Kuwait City"
                             android:textColor="#7A7A7A"
                             android:textSize="12sp"
@@ -97,11 +101,12 @@
 
                         <TextView
                             android:id="@+id/list_coaches_club_txt"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_weight="1"
                             android:layout_marginStart="10dp"
-                            android:drawablePadding="10dp"
-                            android:gravity="center"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
                             tools:text="Kuwait Club"
                             android:textColor="#7A7A7A"
                             android:textSize="12sp"
@@ -115,6 +120,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
+                        android:maxLines="6"
+                        android:ellipsize="end"
                         tools:text="I have been Teaching For 3 years in Kuwait Club"
                         android:textColor="#7A7A7A"
                         android:textSize="12sp" />

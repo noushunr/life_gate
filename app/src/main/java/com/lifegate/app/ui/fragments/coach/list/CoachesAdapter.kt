@@ -73,7 +73,7 @@ class CoachesAdapter(
         holder.binding.listCoachesPlanStartPriceTxt.text = planStart
         loadCircleImage(holder.binding.listCoachesPhotoImg, item.coach_photo)
         holder.binding.listCoachesAboutTxt.text = item.coach_about
-        holder.binding.listCoachesCityTxt.text = item.city_name
+        holder.binding.listCoachesCityTxt.text = "${item.country_name},\n${item.city_name}"
         holder.binding.listCoachesClubTxt.text = item.coach_club_name
 
         holder.binding.root.setOnClickListener {

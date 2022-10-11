@@ -1,5 +1,6 @@
 package com.lifegate.app.ui.fragments.myplan.detail
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,6 +12,8 @@ import com.lifegate.app.data.network.responses.PlanRatingApi
 import com.lifegate.app.data.repositories.PlanRepository
 import com.lifegate.app.utils.*
 import timber.log.Timber
+import java.math.RoundingMode
+import java.text.DecimalFormat
 
 class PlanDetailViewModel(
     private val repository: PlanRepository
@@ -36,8 +39,10 @@ class PlanDetailViewModel(
     var planRule : String? = null
     var planDuration : String? = null
     var planPrice : String? = null
+    var planTotalPrice : String? = null
     var planExtraCost : String? = null
     var planRating : Float = 0f
+    var planRules : Array<String> = arrayOf()
     var planReviewsList = mutableListOf<PlanRatingApi.PlanRating>()
 
     var planPic : String? = null
@@ -102,11 +107,14 @@ class PlanDetailViewModel(
 
             planName = data.plan_name
             planType = data.plantype_name
-            planDesc = data.plan_desc?.clearHtmlTag().toString()
-            planRule = data.plan_rule?.clearHtmlTag().toString()
+            planDesc = data.plan_desc
+            planRule = data.plan_rule
+            planRules = planRule?.split("&nbsp;<br>")?.toTypedArray()!!
+
             planDuration = data.plan_duration
             planPrice = "$" + data.plan_cost
-            planExtraCost = "$" + data.plan_extracost
+            planTotalPrice = "$" + data.plan_total
+            planExtraCost = "$${String.format("%.2f",(data.plan_total?.toDouble()?.minus(data.plan_cost?.toDouble()!!)!!))}"
             coachId = data?.plan_coach!!
 
             val rate = data.plan_avg_rating
@@ -305,5 +313,10 @@ class PlanDetailViewModel(
         listener?.onFailure()
 
         println(response.toString())
+    }
+    fun roundOffDecimal(number: Double): Double? {
+        val df = DecimalFormat("#.###")
+        df.roundingMode = RoundingMode.FLOOR
+        return df.format(number).toDouble()
     }
 }

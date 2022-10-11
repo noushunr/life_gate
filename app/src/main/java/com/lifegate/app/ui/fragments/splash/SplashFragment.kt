@@ -56,7 +56,8 @@ class SplashFragment : Fragment(), KodeinAware {
 
     private fun checkLocation() {
         if (viewModel.getUserLatitude() == null) {
-            goToNextFrag()
+            goToHomeFrag()
+//            goToNextFrag()
         } else {
             goToHomeFrag()
         }

@@ -97,9 +97,9 @@ class CheckoutViewModel(
 
         if (data != null  && status != null && status) {
 
-            planPrice = "$" + data.purchase_plan_price
-            planServicePrice = "$" + data.purchase_extra_price
-            planTotalPrice = "$" + data.purchase_total_price
+            planPrice = "$" + "${String.format("%.2f",(data.purchase_plan_price?.toDouble()))}"
+            planServicePrice = "$" + "${String.format("%.2f",(data.purchase_extra_price?.toDouble()))}"
+            planTotalPrice = "$" + "${String.format("%.2f",(data.purchase_total_price?.toDouble()))}"
             planDiscount = data.purchase_promocode
             planStartDate = setDayMonthDate(data.purchase_start_date.toString())
             planEndDate = setDayMonthDate(data.purchase_exp_date.toString())

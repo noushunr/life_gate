@@ -37,17 +37,7 @@
                         app:sliderIndicatorUnselectedColor="#FFF"
                         app:sliderScrollTimeInSec="3" />
 
-                    <TextView
-                        android:id="@+id/plan_detail_name_txt"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        tools:text="Basketball For 30 Days"
-                        android:textColor="#FFFFFF"
-                        android:textSize="16sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -56,14 +46,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
-
+                    <TextView
+                        android:id="@+id/plan_detail_name_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        tools:text="Basketball For 30 Days"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Description"
                         android:textColor="#000000"
                         android:textSize="18sp"
+                        android:layout_marginTop="5dp"
                         android:textStyle="bold" />
+
 
                     <TextView
                         android:id="@+id/plan_detail_desc_txt"
@@ -301,13 +303,25 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:padding="8dp">
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/plan_rules"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
 
+                        android:layout_marginTop="4dp"
+                        android:scrollbars="none"
+                        tools:listitem="@layout/list_rules"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+                    </androidx.recyclerview.widget.RecyclerView>
                     <TextView
                         android:id="@+id/plan_detail_rules_txt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         tools:text="Lorem ipsum dolor sit amet, consetetur sadipscing elitr,\nsed diam nonumy eirmod tempor invidunt \nut labore"
                         android:textSize="12sp"
+                        android:visibility="gone"
                         android:textColor="#7D7C7C" />
 
                     <!--<TextView
